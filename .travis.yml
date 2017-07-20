@@ -7,6 +7,7 @@ before_script:
   - export ISE_PLATFORM=linux-x86-64
   - export PATH=$PATH:$ISE_EIFFEL/studio/spec/$ISE_PLATFORM/bin
   - export PATH=$PATH:$ISE_EIFFEL/tools/spec/$ISE_PLATFORM/bin
+  - cd EiffelCI
 
 script: compile_all -ecb -melt -list_failures -clean -options dotnet=false
 
