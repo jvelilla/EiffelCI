@@ -1,9 +1,8 @@
 language: eiffel
 before_script:
-  - wget https://ftp.eiffel.com/pub/beta/nightly/Eiffel_17.11_gpl_100608-linux-x86-64.tar.bz2  -O /tmp/Eiffel_17.11_gpl_100608-linux-x86-64.tar.bz2
-  - tar -xvf /tmp/Eiffel_17.11_gpl_100608-linux-x86-64.tar.bz2
+  - wget https://ftp.eiffel.com/pub/beta/nightly/Eiffel_17.11_gpl_100608-linux-x86-64.tar.bz2  
+  - tar -xvf Eiffel_17.11_gpl_100608-linux-x86-64.tar.bz2
   - export ISE_EIFFEL=$PWD/Eiffel_17.11
-  - echo $PWD
   - export ISE_PLATFORM=linux-x86-64
   - export PATH=$PATH:$ISE_EIFFEL/studio/spec/$ISE_PLATFORM/bin
   - 
