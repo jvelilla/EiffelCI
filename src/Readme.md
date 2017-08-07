@@ -1,4 +1,5 @@
 # Eiffel CI Tutorial: Getting Started
+Master: [![Build Status](https://travis-ci.org/jvelilla/EiffelCI.svg?branch=master)](https://travis-ci.org/jvelilla/EiffelCI)
 
 We know that we need to test our applications thoroughly to catch problems before they affect our users. Eiffel Developers has the advantages of Design by Contract, but we also need to double check our code. Forgetting to test can result in complications, endless debugging session, money, etc, but remembering to run test cases before each commit, pull-request or merge can be can be difficult if you have to do it manually.
 
@@ -49,3 +50,4 @@ In this file we tell Travis-CI we are using `Eiffel`, since Eiffel is not suppor
 * Fix the code by making sure that  variable  ‘id’ of type STRING’ is properly set. commit and push to GitHub. This time, the build does not fail.
 
 That’s basically a simple configuration, now you know how to add a GitHub repository to Travis and learnt the basics of configuring builds and testing code for your `Eiffel` projects.
+
