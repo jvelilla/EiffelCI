@@ -21,5 +21,5 @@ feature {NONE} -- Initialization
 			print ("Hello Eiffel World!%N")
 		end
 
-	app_name: STRING
+	app_name: detachable STRING
 end
