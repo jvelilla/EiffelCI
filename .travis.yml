@@ -1,17 +1,16 @@
 language: eiffel
 before_script:
-  - cd ..
-  - wget https://ftp.eiffel.com/pub/beta/nightly/Eiffel_17.11_gpl_100608-linux-x86-64.tar.bz2  
-  - tar -xvf Eiffel_17.11_gpl_100608-linux-x86-64.tar.bz2
-  - export ISE_EIFFEL=$PWD/Eiffel_17.11
+  - export current_dir=$PWD ; echo current_dir=$current_dir ; cd ..
+  - export ISE_EIFFEL=$PWD/Eiffel_17.11; 
   - export ISE_PLATFORM=linux-x86-64
-  - export PATH=$PATH:$ISE_EIFFEL/studio/spec/$ISE_PLATFORM/bin
-  - export PATH=$PATH:$ISE_EIFFEL/tools/spec/$ISE_PLATFORM/bin
-  - cd EiffelCI
+  - curl -sSL https://ftp.eiffel.com/pub/beta/nightly/Eiffel_17.11_gpl_100608-linux-x86-64.tar.bz2 | tar -x --bzip2
+  - export PATH=$PATH:$ISE_EIFFEL/studio/spec/$ISE_PLATFORM/bin:$PATH:$ISE_EIFFEL/tools/spec/$ISE_PLATFORM/bin
+  - echo `ec -version`
+  - cd $current_dir
 
 script: 
   #compile code
-  - compile_all -ecb -melt -list_failures -clean -options dotnet=false
+  -  compile_all -ecb -melt -list_failures -log_verbose -clean -options dotnet=false
   #testing
   - ec -config src/src.ecf -c_compile -tests 
 
