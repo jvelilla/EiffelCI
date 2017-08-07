@@ -1,7 +1,7 @@
 # Eiffel CI Tutorial: Getting Started
 Master: [![Build Status](https://travis-ci.org/jvelilla/EiffelCI.svg?branch=master)](https://travis-ci.org/jvelilla/EiffelCI)
 
-We know that we need to test our applications thoroughly to catch problems before they affect our users. Eiffel Developers has the advantages of Design by Contract, but we also need to double check our code. Forgetting to test can result in complications, endless debugging session, money, etc, but remembering to run test cases before each commit, pull-request or merge can be can be difficult if you have to do it manually.
+We know that we need to test our applications thoroughly to catch problems before they affect our users. Eiffel Developers has the advantages of Design by Contract, but we also need to double check our code. Forgetting to test can result in complications, endless debugging sessions, money, etc, but remembering to run test cases before each commit, pull-request or merge can be can be difficult if you have to do it manually.
 
 ## Continuous Integration
 Continuous Integration, often abbreviated to just CI, is the process of automatically building and running tests whenever a change is committed.
